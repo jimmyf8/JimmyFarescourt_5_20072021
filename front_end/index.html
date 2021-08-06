@@ -11,80 +11,76 @@
 <body>
     <div class="container">
         <div class="row">
-           <div class="col">
-            <header><!--header-->
-                <nav class="col navbar navbar-expand navbar-dark">
-                    <a class="navbar-brand" href="index.html">Oricono</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
-                       <span class="navbar-toggler-icon">Ours</span>
-                    </button>
-                    <div id="navbarContent" class="collapse navbar-collapse">
-                       <ul class="navbar-nav">
-                          <li class="nav-item active">
-                             <a class="nav-link" href="index.html">Accueil</a>
-                          </li>
-                          <li class="nav-item">
-                             <a class="nav-link" href="pages/produit.html">produit</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="pages/panier.html">panier</a>
-                         </li>
-                       </ul>
-                    </div>
-                </nav>
-                <div class="row mb-3">
+            <div class="col">
+                <header><!--header-->
+                    <nav class="col navbar navbar-expand navbar-dark">
+                        <a class="navbar-brand" href="index.html">Oricono</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                            <span class="navbar-toggler-icon">Ours</span>
+                        </button>
+                        <div id="navbarContent" class="collapse navbar-collapse">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Accueil</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/produit.html">produit</a>
+                                </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="pages/panier.html">panier</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                 <div class="row mb-3">
                     <div class="col">
                        <input class="form-control" id="searchInput" type="text" placeholder="Search..">
                     </div>
-                </div>
-            </header>
-           </div>
+                 </div>
+                </header>
+            </div>
         </div>
         <div class="jumbotron text-center">
             <h1>Bienvenue sur Oricono!</h1>
         </div>
-          
         <div class="container">
             <div class="row">
-                <div id="img"></div>
                 <div class="col-sm-3">
-                    <h3 id="name">Teddies</h3>
-                    <p id="description"></p>
-                </div>
-                <div class="col-sm-3">
-                    <h3 id="name">Teddies</h3>
-                    <p id="description"></p>
-                </div>
-                <div class="col-sm-3">
-                    <h3 id="name">Teddies</h3>
-                    <p id="description"></p>
-                </div>
-                <div class="col-sm-3">
-                    <h3 id="name">Teddies</h3>
-                    <p id="description"></p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <footer>
-                    <ul class=”list-inline”>
-                        <div class="row">
-                            <div class="col-4">
-                                <li class=”list-inline-item”>contact</li>
-                            </div>
-                            <div class="col-4">
-                                <li class=”list-inline-item”>contact</li>
-                            </div>   
-                            <div class="col-4">
-                                <li class=”list-inline-item”>contact</li>
-                            </div>
+                    <div  class="card" id="main">
+                        <img class="card-img-top" src="" alt="Card image cap" id="img">
+                        <div class="card-body">
+                            <h5 class="card-title" id="name">titre</h5>
+                            <p class="card-text" id="description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text" id="_id">Some.</p>
+                            <p class="card-text" id="price">Some.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
-                    </ul>
-                </footer>
+                    </div>      
+                </div>
+            </div>    
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <footer>
+                        <ul class=”list-inline”>
+                            <div class="row">
+                                <div class="col-4">
+                                    <li class=”list-inline-item”>contact</li>
+                                </div>
+                                <div class="col-4">
+                                    <li class=”list-inline-item”>contact</li>
+                                </div>   
+                                <div class="col-4">
+                                    <li class=”list-inline-item”>contact</li>
+                                </div>
+                            </div>
+                        </ul>
+                    </footer>
+                </div>
             </div>
         </div>
-     </div>
+    </div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="script.js"></script>

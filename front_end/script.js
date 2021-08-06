@@ -1,85 +1,40 @@
-fetch('http://localhost:3000/api/teddies')
-.then(function(res){
-    if (res.ok){
-        return res.json();
-    }
-})
-.then(function(value){
-    for (let val of value){
-        console.log(val.imageUrl);
-    }
-})
-.catch(function(err) {
-    /*Une erreur est survenue*/
-});
+main()
 
-fetch('http://localhost:3000/api/teddies')
-.then(function(res){
-    if (res.ok){
-        return res.json();
-    }
-})
-.then(function(value){
-    for (let val of value){
-        console.log(val._id);
-    }
-})
-.catch(function(err) {
-    /*Une erreur est survenue*/
-});
-
-fetch('http://localhost:3000/api/teddies')
-.then(function(res){
-    if (res.ok){
-        return res.json();
-    }
-})
-.then(function(value){
-    for (let val of value){
-        console.log(val.name);
-    }
-})
-.catch(function(err) {
-    /*Une erreur est survenue*/
-});
-
-fetch('http://localhost:3000/api/teddies')
-.then(function(res){
-    if (res.ok){
-        return res.json();
-    }
-})
-.then(function(value){
-    for (let val of value){
-        console.log(val.price);
-    }
-})
-.catch(function(err) {
-    /*Une erreur est survenue*/
-});
-const names = 'name' ;
-const body = document.getElementById('name');
-
-for(let name of names) {
-  let newDiv = document.createElement('div');
+async function main() {
+  const articles = await getArticles()
+  for (article of articles) {
+    displayArticle(article)
+  }
+  
+  
 }
 
-let name = document.getElementById("name").innerHTML;
-
-
-const h1 = document.getElementById('name');
-const imageUrl = 'http://localhost:3000/api/teddies';
-
-function afficheNom(name) {
-    return document.createElement(name);
-    console.log(name);
+function getArticles() {
+  return fetch('http://localhost:3000/api/teddies')
+    .then(function(httpBodyResponse) {
+      return httpBodyResponse.json()
+    })
+    .then(function(articles) {
+      return articles
+    })
+    .catch(function(error) {
+      alert(error)
+    })
 }
 
-let div = document.querySelector('.container');
-
-let p = document.createElement('p');
-p.textContent = 'JS DOM';
-div.appendChild(p);
-
-
-   
+function displayArticle() {
+  document.getElementById("main").innerHTML += `
+  <div  class="card" id="main">
+    <img class="card-img-top" src="${article.imageUrl}" alt="Card image cap" id="img">
+    <div class="card-body">
+      <h5 class="card-title" id="name">${article.name}</h5>
+      <p class="card-text" id="description">${article.description}</p>
+      <p class="card-text" id="_id">identifiant: ${article._id}</p>
+      <p class="card-text" id="price">${article.price}/100</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>      
+  `
+}
+  
+  
