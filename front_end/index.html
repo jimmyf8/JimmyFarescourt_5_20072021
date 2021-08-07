@@ -31,12 +31,12 @@
                                 </li>
                             </ul>
                         </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                               <input class="form-control" id="searchInput" type="text" placeholder="Rechercher des teddies">
+                            </div>
+                        </div>
                     </nav>
-                 <div class="row mb-3">
-                    <div class="col">
-                       <input class="form-control" id="searchInput" type="text" placeholder="Search..">
-                    </div>
-                 </div>
                 </header>
             </div>
         </div>
@@ -45,16 +45,18 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col">
                     <div  class="card" id="main">
-                        <img class="card-img-top" src="" alt="Card image cap" id="img">
-                        <div class="card-body">
-                            <h5 class="card-title" id="name">titre</h5>
-                            <p class="card-text" id="description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <p class="card-text" id="_id">Some.</p>
-                            <p class="card-text" id="price">Some.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
+                        <template id="templateArticle">
+                            <img class="card-img-top" src="" alt="Card image cap" id="img">
+                            <div class="card-body">
+                                <h5 class="card-title" id="name">titre</h5>
+                                <p class="card-text" id="description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class="card-text" id="_id">Some.</p>
+                                <p class="card-text" id="price"></p>
+                                <a href="pages/produit.html" id="click" class="btn btn-primary">voir l'article</a>
+                            </div>
+                        </template>
                     </div>      
                 </div>
             </div>    

@@ -8,9 +8,9 @@ async function main() {
   
   
 }
-
+//
 function getArticles() {
-  return fetch('http://localhost:3000/api/teddies')
+  return fetch("http://localhost:3000/api/teddies")
     .then(function(httpBodyResponse) {
       return httpBodyResponse.json()
     })
@@ -22,19 +22,17 @@ function getArticles() {
     })
 }
 
-function displayArticle() {
-  document.getElementById("main").innerHTML += `
-  <div  class="card" id="main">
-    <img class="card-img-top" src="${article.imageUrl}" alt="Card image cap" id="img">
-    <div class="card-body">
-      <h5 class="card-title" id="name">${article.name}</h5>
-      <p class="card-text" id="description">${article.description}</p>
-      <p class="card-text" id="_id">identifiant: ${article._id}</p>
-      <p class="card-text" id="price">${article.price}/100</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>      
-  `
+function displayArticle(article) {
+  const templateElt = document.getElementById("templateArticle")
+  const cloneElt = document.importNode(templateElt.content, true)
+
+  cloneElt.getElementById("name").textContent = article.name
+  cloneElt.getElementById("price").textContent = article.price
+  cloneElt.getElementById("img").src = article.imageUrl
+  cloneElt.getElementById("click").href += `?id = ${article._id}`
+
+  
+  document.getElementById("main").appendChild(cloneElt)
 }
-  
-  
+
+
