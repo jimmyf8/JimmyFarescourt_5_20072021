@@ -29,3 +29,5 @@ function hydrateArticle(article){
   document.getElementById("description").textContent = article.description
   document.getElementById("img").src = article.imageUrl
 }
+
+localStorage.setItem('name', 'Nobert');
