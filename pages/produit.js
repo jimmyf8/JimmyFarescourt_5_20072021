@@ -25,8 +25,9 @@ function getArticle(articleId){
 }
 function hydrateArticle(article){
   document.getElementById("name").textContent = article.name
-  document.getElementById("price").textContent = (article.price / 100) + "   euros"
+  document.getElementById("price").textContent = (article.price / 100) + ",00 €"
   document.getElementById("description").textContent = article.description
+ 
   document.getElementById("img").src = article.imageUrl
 }
 
