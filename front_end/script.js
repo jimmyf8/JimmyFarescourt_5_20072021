@@ -29,6 +29,7 @@ function displayArticle(article) {
   cloneElt.getElementById("name").textContent = article.name
   cloneElt.getElementById("price").textContent = article.price
   cloneElt.getElementById("img").src = article.imageUrl
+  cloneElt.getElementById("_id").textContent = article._id
   cloneElt.getElementById("click").href += `?id = ${article._id}`
 
   
