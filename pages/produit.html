@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--lien boostrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="../style.css">
     <title>Oricono</title>
 </head>
@@ -37,7 +39,7 @@
                 </header>
             </div>
         </div>
-        <div class="container">
+        <div class="container"><!--produit-->
             <div class="row">
                 <div class="col">
                     <div  class="card" id="main">
@@ -47,18 +49,21 @@
                             <p class="card-text" id="description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <p class="card-text" id="click">Some.</p>
                             <p class="card-text" id="price"></p> 
-                            <div class="product-card__infos__quantity">
-                                <label for="teddyNum">Quantité :</label>
-                                <input id="teddyNum" type="number" name="teddyNum" value="1" min="1">
-                            </div>
-                            <div class="product_color">
-                                <label for="color_select" >Couleur :</label>
-                                <select name="color"  >
-                                    <option value="color1" id="color1" ></option>
-                                    <option value="color2" id="color2"></option>
-                                    <option value="color3" id="color3" ></option>
-                                    <option value="color4" id="color4" ></option>
-                                </select>
+                            <div class="product_color"><!--sélecteur-->
+                                <form>
+                                    <div class="product-card__infos__quantity">
+                                        <label for="teddyNum">Quantité :</label>
+                                        <input id="teddyNum" type="number" name="teddyNum" value="1" min="1"  pattern="[0-9]+">
+                                    </div>
+                                    <label for="color_select" >Couleur :</label>
+                                    <select name="color" id="select"  >
+                                        <option value="color1" id="color1" ></option>
+                                        <option value="color2" id="color2"></option>
+                                        <option value="color3" id="color3" ></option>
+                                        <option value="color4" id="color4" ></option>                                       
+                                    </select>
+                                    <button  type="submit" id ="btn_panier">ajouter au panier</button>
+                                </form>                              
                             </div>
                             <a href="../index.html" id="click" class="btn btn-primary">retour à l'accueil</a>
                         </div>
@@ -69,7 +74,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <footer>
+                    <footer><!--footer-->
                         <ul class=”list-inline”>
                             <div class="row">
                                 <div class="col-4">

@@ -8,3 +8,10 @@ body{
     display: flex;
     background-color: aquamarine;
 }
+
+input:valid{
+    border: 1px solid green;
+}
+input{
+    outline: none;
+}

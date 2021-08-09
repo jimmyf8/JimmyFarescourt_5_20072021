@@ -1,5 +1,5 @@
 main()
-
+//affiche les produits
 async function main() {
   const articles = await getArticles()
   for (article of articles) {
@@ -8,7 +8,7 @@ async function main() {
   
   
 }
-//
+//récupère les données
 function getArticles() {
   return fetch("http://localhost:3000/api/teddies")
     .then(function(httpBodyResponse) {
@@ -21,7 +21,7 @@ function getArticles() {
       alert(error)
     })
 }
-
+//implante dans le html
 function displayArticle(article) {
   const templateElt = document.getElementById("templateArticle")
   const cloneElt = document.importNode(templateElt.content, true)
