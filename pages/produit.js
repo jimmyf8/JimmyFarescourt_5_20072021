@@ -23,10 +23,16 @@ function getArticle(articleId){
     alert(error)
   })
 }
+
+//intégration des données du produit
 function hydrateArticle(article){
   document.getElementById("name").textContent = article.name
   document.getElementById("price").textContent = (article.price / 100) + ",00 €"
   document.getElementById("description").textContent = article.description
+  document.getElementById("color1").textContent = article.colors[0]
+  document.getElementById("color2").textContent = article.colors[1]
+  document.getElementById("color3").textContent = article.colors[2]
+  document.getElementById("color4").textContent = article.colors[3]
  
   document.getElementById("img").src = article.imageUrl
 }
