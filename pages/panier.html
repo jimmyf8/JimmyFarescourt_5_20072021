@@ -24,35 +24,61 @@
                           <li class="nav-item active">
                              <a class="nav-link" href="../index.html">Accueil</a>
                           </li>
-                          <li class="nav-item">
-                             <a class="nav-link" href="produit.html">produit</a>
-                          </li>
                        </ul>
                     </div>
                  </nav>
             </header>
+            <h1 id="titre_panier">Votre panier est vide</h1>
            </div>
         </div>
         <div class="row">
             <div class="col">
                 <main><!--main-->
-                    <div class="container">
+                    <div class="container"><!--carte-->
                         <div class="row">
-                            <div class="col">
-                                <div  class="card" id="main">
-                                    <img class="card-img-top" src="" alt="Carte image de teddy" id="img">
-                                    <div class="card-body">
-                                        <h5 class="card-title" id="name">titre</h5>
-                                        <p class="card-text" id="description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <p class="card-text" id="click">Some.</p>
-                                        <p class="card-text" id="price"></p> 
-                                        <a href="../index.html" id="click" class="btn btn-primary">retour à l'accueil</a>
+                                <section>
+                                    <div class="col-9">
+                                        <table><!--tableau récapitulatif-->
+                                            <tr>
+                                                <th>Nom</th>
+                                                <th>Quantité</th>
+                                                <th>Prix</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Norbert</td>
+                                                <td>1</td>
+                                                <td>29.00 €</td>
+                                            </tr>
+                                           
+                                        </table>
+                                                
                                     </div>
-                                </div>      
+                                    <form id="inscription" name="inscription">
+                                        <input type="text"  placeholder="Nom" id="Nom" required><br>
+                                        <input type="text" name="prenom" placeholder="Prénom" id="Prenom" required><br>
+                                        <input type="email" name="email" placeholder="contact@gmail.com" id="Email" required><br>
+                                        <input type="email" name="email_confirmation" placeholder="Confirmation de l'email" id="Email2" required><br>
+                                        <input type="password" name="mdp" placeholder="Mot de passe" id="mdp" required><br>
+                                        <input type="submit" name="value" value="Valider la commande" id="bouton_inscription" required href="confirmation_de_commande.html"><br>
+                                    </form>
+                                    <p id="erreur"></p>
+                                </section>
                             </div>
-                        </div>    
+                            <template id="templateMessage">
+                                <div class="col"><!--message de confirmation-->
+                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        <h5 class="alert-heading">Félicitations ! Votre commande est confirmée !</h5>
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                           <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </template>
+                        </div> 
+                        <button id="clear">Vider le panier</button>
                     </div>  
                 </main>
+                
             </div>
         </div>
         <div class="row">
@@ -69,5 +95,6 @@
         </div>
      </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="panier.js"></script>
 </body>
 </html>
