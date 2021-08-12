@@ -2,6 +2,11 @@ body{
     background:rgb(103, 119, 134);
     height: 100vh;
     margin:20px;
+    
+    #logo{
+        width:80%;
+    }
+    
 }
 
 #templateArticle{
@@ -15,3 +20,13 @@ input:valid{
 input{
     outline: none;
 }
+
+table
+{
+    border-collapse: collapse;
+}
+td, th /* Mettre une bordure sur les td ET les th */
+{
+    border: 1px solid rgb(255, 255, 255);
+}
+

@@ -3,4 +3,31 @@ body {
   height: 100vh;
   margin: 20px;
 }
+
+body #logo {
+  width: 80%;
+}
+
+#templateArticle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: aquamarine;
+}
+
+input:valid {
+  border: 1px solid green;
+}
+
+input {
+  outline: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid white;
+}
 /*# sourceMappingURL=style.css.map */
