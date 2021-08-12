@@ -39,3 +39,22 @@ function hydrateArticle(article){
 }
 
 
+// ajouter une donnée dans le local storage
+btn_panier.onclick = () =>{
+ 
+  localStorage.setItem("Quantité",teddyNum.value)
+  localStorage.setItem("Prix",teddyPrice)
+  localStorage.setItem("Email",Email.value)
+}
+if(localStorage.getItem("Quantité") != null)
+    h1.textContent = `Vous avez commandé ${localStorage.getItem("Quantité")}`;
+
+//récupérer une donnée dans le local storage
+let maDonneeNom = localStorage.getItem("Nom");
+let maDonneePrenom = localStorage.getItem("Prénom");
+
+console.log(maDonneeNom);
+//supprimer une donnée dans le local storage
+localStorage.removeItem("Prénom")
+
+//supprimer le local storage
