@@ -24,17 +24,20 @@ function getArticles() {
 //implante dans le html
 function displayArticle(article) {
   const templateElt = document.getElementById("templateArticle")
+  templateElt.style.marginTop = 100;//style
   const cloneElt = document.importNode(templateElt.content, true)
 
   cloneElt.getElementById("name").textContent = article.name
   cloneElt.getElementById("price").textContent = (article.price / 100) + ",00 €"
   cloneElt.getElementById("description").textContent = article.description
   cloneElt.getElementById("img").src = article.imageUrl
-  cloneElt.getElementById("_id").textContent = "identifiant:   " + article._id
   cloneElt.getElementById("click").href += `?id = ${article._id}`
 
   
   document.getElementById("main").appendChild(cloneElt)
 }
+
+//style
+
 
 
