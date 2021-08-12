@@ -2,7 +2,7 @@
 (async function(){
   const articleId = getArticleId()
   const article = await getArticle(articleId)
-  hydrateArticle(article)
+  // hydrateArticle(article)
 
 })()
 //récupère l'id
@@ -13,12 +13,12 @@ function getArticleId() {
 }
 //récupère le produit
 function getArticle(articleId){
-  return fetch(`http://localhost:3000/api/teddies/${articleId}`)
-  .then(function(httpBodyResponse) {
-    return httpBodyResponse.json()
+  fetch(`http://localhost:3000/api/teddies/${articleId}`)
+  .then((response) => {
+    return response.json()
   })
-  .then(function(articles) {
-    return articles
+  .then ((data) => {
+    hydrateArticle(data);
   })
   .catch(function(error) {
     alert(error)
@@ -27,27 +27,26 @@ function getArticle(articleId){
 
 //intégration des données du produit
 function hydrateArticle(article){
-  document.getElementById("name").textContent = article.name
-  document.getElementById("price").textContent = (article.price / 100) + ",00 €"
-  document.getElementById("description").textContent = article.description
-  document.getElementById("color1").textContent = article.colors[0]
-  document.getElementById("color2").textContent = article.colors[1]
-  document.getElementById("color3").textContent = article.colors[2]
-  document.getElementById("color4").textContent = article.colors[3]
+  // console.log(article);
+  document.getElementById("name").textContent = article['name']
+  document.getElementById("price").textContent = (article['price'] / 100) + ",00 €"
+  document.getElementById("description").textContent = article['description']
  
-  document.getElementById("img").src = article.imageUrl
+ 
+  document.getElementById("img").src = article['imageUrl']
 }
 
 
 // ajouter une donnée dans le local storage
 btn_panier.onclick = () =>{
+  console.log('ici');
  
   localStorage.setItem("Quantité",teddyNum.value)
   localStorage.setItem("Prix",teddyPrice)
   localStorage.setItem("Email",Email.value)
 }
-if(localStorage.getItem("Quantité") != null)
-    h1.textContent = `Vous avez commandé ${localStorage.getItem("Quantité")}`;
+// if(localStorage.getItem("Quantité") != null)
+//     h1.textContent = `Vous avez commandé ${localStorage.getItem("Quantité")}`;
 
 //récupérer une donnée dans le local storage
 let maDonneeNom = localStorage.getItem("Nom");

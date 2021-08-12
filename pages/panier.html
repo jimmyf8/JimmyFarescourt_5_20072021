@@ -39,18 +39,17 @@
                                 <section>
                                     <div class="col-9">
                                         <table><!--tableau récapitulatif-->
-                                            <tr>
-                                                <th>Nom</th>
-                                                <th>Quantité</th>
-                                                <th>Prix</th>
-                                            </tr>
-                                            <tr>
-                                                <td>Norbert</td>
-                                                <td>1</td>
-                                                <td>29.00 €</td>
-                                            </tr>
-                                           
+                                            <thead>
+                                                <th id="Nom_panier">Libellé</th>
+                                                <th id="Quantite_panier">Quantité</th>
+                                                <th id="Prix_panier">Prix</th>
+                                                <th id="Couleur_panier">Couleur</th>
+                                            </thead>
+                                            <tbody>
+                                                getTeddies(storedTeddies);
+                                            </tbody>  
                                         </table>
+                                        <h2 id="total">total:</h2>
                                                 
                                     </div>
                                     <form id="inscription" name="inscription">
