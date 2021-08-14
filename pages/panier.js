@@ -1,5 +1,5 @@
 // ajouter une donnée dans le local storage
-bouton_inscription.onclick = () =>{
+Confirmer_la_commande.onclick = () =>{
     localStorage.setItem("Nom",Nom.value);
     localStorage.setItem("Prénom",Prenom.value);
     localStorage.setItem("Email",Email.value);
@@ -94,12 +94,12 @@ function getStoredTeddies () {
 function getTeddies(storedTeddies) {
     let result ='';
     for (teddy of storedTeddies) {
-        result +=   <th>Libellé</th>
+        result +=   `<th>Libellé</th>
                     <th>maDonneeQuantite</th>
                     <th>article.name/th>
                     <th>Couleur</th>  
-                    <td><button><span class=" glyphicon glyphicon-remove">"onclick"</span></button></td>  
+                    <td><button><span class=" glyphicon glyphicon-remove">"onclick"</span></button></td>`  
     }
     return result;
 }
-getStoredTeddies();
+getStoredTeddies()

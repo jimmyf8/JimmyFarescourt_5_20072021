@@ -24,7 +24,6 @@ function getArticles() {
 //implante dans le html
 function displayArticle(article) {
   const templateElt = document.getElementById("templateArticle")
-  templateElt.style.marginTop = 100;//style
   const cloneElt = document.importNode(templateElt.content, true)
 
   cloneElt.getElementById("name").textContent = article.name
@@ -38,6 +37,7 @@ function displayArticle(article) {
 }
 
 //style
+document.getElementsByClassName('p');
 
 
 

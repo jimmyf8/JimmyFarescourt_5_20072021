@@ -1,18 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
 body {
-  background: #677786;
   height: 100vh;
   margin: 20px;
 }
 
 body #logo {
   width: 80%;
-}
-
-#templateArticle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: aquamarine;
 }
 
 input:valid {
@@ -29,5 +23,137 @@ table {
 
 td, th {
   border: 1px solid white;
+  color: white;
+}
+
+.card-text-description {
+  color: #0b87b8;
+  font-family: 'Anton', sans-serif;
+  font-size: 2vmax;
+}
+
+.card-text-description:hover {
+  color: #f15a94;
+}
+
+.card-text-price {
+  color: #445499;
+  font-size: 3vmax;
+}
+
+.main {
+  background-color: darkgreen;
+}
+
+/********panier**************/
+#titre_panier {
+  color: white;
+}
+
+#total {
+  color: white;
+}
+
+#bouton_inscription {
+  background-color: white;
+  border-color: white;
+  border-radius: 22px;
+  padding: 10px;
+  margin-top: 10px;
+  font-family: 'Libre Baskerville', serif;
+}
+
+#clear {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+#btn_panier {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+#submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Style the container */
+.container {
+  border-radius: 5px;
+  background-color: #445499;
+  padding: 20px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

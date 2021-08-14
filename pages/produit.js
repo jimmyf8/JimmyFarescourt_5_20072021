@@ -1,7 +1,7 @@
 //hydrate les données du produit
 (async function(){
   const articleId = getArticleId()
-  const article = await getArticle(articleId)
+  const article =  getArticle(articleId)
   // hydrateArticle(article)
 
 })()
@@ -31,29 +31,26 @@ function hydrateArticle(article){
   document.getElementById("name").textContent = article['name']
   document.getElementById("price").textContent = (article['price'] / 100) + ",00 €"
   document.getElementById("description").textContent = article['description']
- 
+
  
   document.getElementById("img").src = article['imageUrl']
 }
-
 
 // ajouter une donnée dans le local storage
 btn_panier.onclick = () =>{
   console.log('ici');
  
   localStorage.setItem("Quantité",teddyNum.value)
-  localStorage.setItem("Prix",teddyPrice)
-  localStorage.setItem("Email",Email.value)
+  localStorage.setItem("Prix",(article['price'] / 100) + ",00 €")
+  
 }
 // if(localStorage.getItem("Quantité") != null)
 //     h1.textContent = `Vous avez commandé ${localStorage.getItem("Quantité")}`;
 
-//récupérer une donnée dans le local storage
-let maDonneeNom = localStorage.getItem("Nom");
-let maDonneePrenom = localStorage.getItem("Prénom");
 
-console.log(maDonneeNom);
+
+
 //supprimer une donnée dans le local storage
-localStorage.removeItem("Prénom")
+// localStorage.removeItem("Prénom")
 
 //supprimer le local storage
