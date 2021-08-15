@@ -56,7 +56,22 @@ td, th {
   color: #f15a94;
 }
 
+#description {
+  color: #0b87b8;
+  font-family: 'Anton', sans-serif;
+  font-size: 2vmax;
+}
+
+#description:hover {
+  color: #f15a94;
+}
+
 .card-text-price {
+  color: #445499;
+  font-size: 3vmax;
+}
+
+#price.card-text {
   color: #445499;
   font-size: 3vmax;
 }

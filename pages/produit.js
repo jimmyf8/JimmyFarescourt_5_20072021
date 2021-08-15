@@ -31,17 +31,18 @@ function hydrateArticle(article){
   document.getElementById("name").textContent = article['name']
   document.getElementById("price").textContent = (article['price'] / 100) + ",00 €"
   document.getElementById("description").textContent = article['description']
-
+ 
  
   document.getElementById("img").src = article['imageUrl']
 }
 
 // ajouter une donnée dans le local storage
 btn_panier.onclick = () =>{
-  console.log('ici');
  
+  localStorage.setItem("Nom",'article.name')
   localStorage.setItem("Quantité",teddyNum.value)
-  localStorage.setItem("Prix",(article['price'] / 100) + ",00 €")
+  localStorage.setItem("Prix",price)
+  
   
 }
 // if(localStorage.getItem("Quantité") != null)

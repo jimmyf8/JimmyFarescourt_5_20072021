@@ -18,10 +18,10 @@ titre_panier.textContent = `Voici le récapitulatif de vos commandes`;
 
 //récupérer une donnée dans le local storage
  let maDonneeNom = localStorage.getItem("Nom");
- let maDonneePrenom = localStorage.getItem("Prénom");
+ let maDonneePrix = localStorage.getItem("Prix");
  let maDonneeQuantite = localStorage.getItem("Quantité");
  console.log(maDonneeNom);
- console.log(maDonneePrenom);
+ console.log(maDonneePrix);
  console.log(maDonneeQuantite);
 
 
@@ -34,9 +34,9 @@ clear.onclick = () =>{
     document.location.reload();//recharge la page
 }
 //écoute le formulaire
-console.log(document.forms["inscription"]["email_confirmation"]);
+console.log(document.forms["inscription"],["email_confirmation"]);
 //validation du formulaire
-//valeur name
+
 document.forms["inscription"].addEventListener("submit", function(e) {
     let erreur;
     let inputs = document.getElementById("inscription").getElementsByTagName("input");
