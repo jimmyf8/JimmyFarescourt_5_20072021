@@ -76,7 +76,7 @@ function getStoredTeddies () {
     let storedTeddies = Json.parse(localStorage.getItem('addTeddy'))
     if (storedTeddies) {
         let table ='';
-        table +=   <table>
+        table +=  ` <table>
                         <thead>
                             <th id="Nom_panier">Libellé</th>
                             <th id="Quantite_panier">Quantité</th>
@@ -86,7 +86,7 @@ function getStoredTeddies () {
                         <tbody>
                             getTeddies(storedTeddies);
                         </tbody>  
-                    </table>
+                    </table>`
                 document.querySelector('').innerHTML = table
     }
 }

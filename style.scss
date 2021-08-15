@@ -3,14 +3,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 body{
     height: 100vh;
-    margin:20px;
+   
     
     #logo{
-        width:80%;
+        width:90%;
     }
     
 }
+//navigation
+nav ul li:hover 
+{
+border-top: solid 2.5px rgb(241, 90, 148);
+transition-duration: 0.2s;
+}
 
+i .fa-shopping-basket {
+    :hover{
+       color: rgb(241, 90, 148);
+    }
+}
 
 //input
 input:valid{
@@ -29,6 +40,15 @@ td, th /* Mettre une bordure sur les td ET les th */
 {
     border: 1px solid rgb(255, 255, 255);
     color: rgb(255, 255, 255);
+}
+//carte
+.card{
+    box-shadow: 0 100px 200px rgba(0, 0, 0, 0.01), 0 2px 6px rgba(0, 0, 0, 41.2);
+}
+/* Survol des cartes*/
+.card:hover 
+{
+box-shadow:0 5px 108px #4975b3, 0 1px 0px black;
 }
 //description
 .card-text-description{
@@ -52,7 +72,7 @@ td, th /* Mettre une bordure sur les td ET les th */
 /********panier**************/
 //titre panier
 #titre_panier{
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 #total{
     color: rgb(255, 255, 255);
@@ -68,16 +88,17 @@ td, th /* Mettre une bordure sur les td ET les th */
     
 }
 #clear{
-    background-color: #04AA6D;
+    background-color: rgb(241, 90, 148);
     color: white;
     padding: 12px 20px;
+    margin: 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     float: right;
 }
 #btn_panier{
-    background-color: #04AA6D;
+    background-color: rgb(241, 90, 148);
     color: white;
     padding: 12px 20px;
     border: none;
@@ -87,9 +108,13 @@ td, th /* Mettre une bordure sur les td ET les th */
 }
 
 //formulaire
+.formulaire{
+    color: white;
+}
 #submit{
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
     width: 100%;
 }
 /* Style inputs, select elements and textareas */
@@ -100,57 +125,65 @@ input[type=text], select, textarea{
     border-radius: 4px;
     box-sizing: border-box;
     resize: vertical;
-  }
+}
   
-  /* Style the label to display next to the inputs */
+/* Style the label to display next to the inputs */
   label {
     padding: 12px 12px 12px 0;
     display: inline-block;
-  }
+}
   
-  /* Style the submit button */
-  input[type=submit] {
-    background-color: #04AA6D;
+/* Style the submit button */
+input[type=submit] {
+    background-color: rgb(241, 90, 148);
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     float: right;
-  }
+}
   
-  /* Style the container */
-  .container {
+/* Style the container */
+.container {
     border-radius: 5px;
     background-color: #445499;
     padding: 20px;
-  }
+}
   
-  /* Floating column for labels: 25% width */
-  .col-25 {
+/* Floating column for labels: 25% width */
+.col-25 {
     float: left;
     width: 25%;
     margin-top: 6px;
-  }
+}
   
-  /* Floating column for inputs: 75% width */
-  .col-75 {
+/* Floating column for inputs: 75% width */
+.col-75 {
     float: left;
     width: 75%;
     margin-top: 6px;
-  }
+}
   
-  /* Clear floats after the columns */
-  .row:after {
+/* Clear floats after the columns */
+.row:after {
     content: "";
     display: table;
     clear: both;
-  }
+}
   
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
     .col-25, .col-75, input[type=submit] {
       width: 100%;
       margin-top: 0;
     }
-  }
+}
+
+
+
+//footer
+footer{
+    font-family:'Anton', sans-serif; ;
+}
+

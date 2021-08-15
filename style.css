@@ -2,11 +2,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
 body {
   height: 100vh;
-  margin: 20px;
 }
 
 body #logo {
-  width: 80%;
+  width: 90%;
+}
+
+nav ul li:hover {
+  border-top: solid 2.5px #f15a94;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+i .fa-shopping-basket :hover {
+  color: #f15a94;
 }
 
 input:valid {
@@ -24,6 +33,17 @@ table {
 td, th {
   border: 1px solid white;
   color: white;
+}
+
+.card {
+  -webkit-box-shadow: 0 100px 200px rgba(0, 0, 0, 0.01), 0 2px 6px black;
+          box-shadow: 0 100px 200px rgba(0, 0, 0, 0.01), 0 2px 6px black;
+}
+
+/* Survol des cartes*/
+.card:hover {
+  -webkit-box-shadow: 0 5px 108px #4975b3, 0 1px 0px black;
+          box-shadow: 0 5px 108px #4975b3, 0 1px 0px black;
 }
 
 .card-text-description {
@@ -47,7 +67,7 @@ td, th {
 
 /********panier**************/
 #titre_panier {
-  color: white;
+  color: black;
 }
 
 #total {
@@ -64,7 +84,18 @@ td, th {
 }
 
 #clear {
-  background-color: #04AA6D;
+  background-color: #f15a94;
+  color: white;
+  padding: 12px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+#btn_panier {
+  background-color: #f15a94;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -73,14 +104,8 @@ td, th {
   float: right;
 }
 
-#btn_panier {
-  background-color: #04AA6D;
+.formulaire {
   color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
 }
 
 #submit {
@@ -90,6 +115,7 @@ td, th {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 10px;
   width: 100%;
 }
 
@@ -112,7 +138,7 @@ label {
 
 /* Style the submit button */
 input[type=submit] {
-  background-color: #04AA6D;
+  background-color: #f15a94;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -155,5 +181,9 @@ input[type=submit] {
     width: 100%;
     margin-top: 0;
   }
+}
+
+footer {
+  font-family: 'Anton', sans-serif;
 }
 /*# sourceMappingURL=style.css.map */

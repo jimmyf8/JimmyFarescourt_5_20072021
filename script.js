@@ -38,6 +38,3 @@ function displayArticle(article) {
 
 //style
 document.getElementsByClassName('p');
-
-
-

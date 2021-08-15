@@ -1,124 +1,142 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--lien boostrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link type="text/css" rel="stylesheet" href="../style.css">
-    <title>Oricono</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--lien boostrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="../style.css">
+  <title>Oricono</title>
 </head>
+
 <body>
-    <div class="container">
-        <div class="row">
-           <div class="col">
-            <header><!--header-->
-                <nav class="col navbar navbar-expand navbar-dark">
-                    <a class="navbar-brand" href="../index.html">Oricono</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
-                       <span class="navbar-toggler-icon">Ours</span>
-                    </button>
-                    <div id="navbarContent" class="collapse navbar-collapse">
-                       <ul class="navbar-nav">
-                          <li class="nav-item active">
-                             <a class="nav-link" href="../index.html">Accueil</a>
-                          </li>
-                       </ul>
-                    </div>
-                 </nav>
-            </header>
-            <h1 id="titre_panier">Votre panier est vide</h1>
-           </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <main><!--main-->
-                    <div class="container"><!--carte-->
-                        <div class="row">
-                            <table><!--tableau récapitulatif-->
-                                <thead>
-                                    <th id="Nom_panier">Libellé</th>
-                                    <th id="Quantite_panier">Quantité</th>
-                                    <th id="Prix_panier">Prix</th>
-                                    <th id="Couleur_panier">Couleur</th>
-                                </thead>
-                                <tbody>
-                                    
-                                </tbody>  
-                            </table>
-                                    
-                        </div> 
-                        <input type="submit" value="vider le panier" id="clear">
-                    </div>  
-                    <div class="container">
-                        
-                            </div>
-                        </div>
-                    </div>
-                </main>
-                <div class="container">
-                    <form action="action_page.php" >
-                      <div class="row">
-                        <div class="col-25">
-                          <label for="fname">Nom</label>
-                        </div>
-                        <div class="col-75">
-                          <input type="text" id="fname" name="firstname" placeholder="Nom">
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-25">
-                          <label for="lname">Prénom</label>
-                        </div>
-                        <div class="col-75">
-                          <input type="text" id="lname" name="lastname" placeholder="Prénom">
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-25">
-                          <label for="Email">Email</label>
-                        </div>
-                        <div class="col-75">
-                          <input type="text" id="Email" name="firstname" placeholder="Email valide">
-                        </div>
-                      </div><div class="row">
-                        <div class="col-25">
-                          <label for="Email2">Email de confirmation</label>
-                        </div>
-                        <div class="col-75">
-                          <input type="text" id="Email2" name="firstname" placeholder="Email de confirmation">
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-25">
-                          <label for="mdp">Mot de passe</label>
-                        </div>
-                        <div class="col-75">
-                            <input type="text" id="mdp" name="firstname" placeholder="Mot de passe">
-                          </div>
-                      <div class="row" id="submit">
-                        <input type="submit" value="Confirmer la commande" id="Confirmer la commande" required href="confirmation_de_commande.html">
-                        <h2 id="total">total:</h2>
-                      </div>
-                    </form>
-                  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <header>
+          <!--header-->
+          <nav class="col navbar navbar-expand navbar-dark">
+            <a class="navbar-brand" href="../index.html">Oricono</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+              <span class="navbar-toggler-icon">Ours</span>
+            </button>
+            <div id="navbarContent" class="collapse navbar-collapse">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="../index.html">Accueil</a>
+                </li>
+              </ul>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <footer><!--footer-->
-                    <ul class=”list-inline”>
-                        <div class="row">
-                            <div class="col">
-                                <li class=”list-inline-item”>contact</li>
-                        </div>
-                    </ul>
-                </footer>
+          </nav>
+        </header>
+        <div class="jumbotron text-center">
+          <div class="row">
+            <div class="col-25">
+              <img id="logo" src="../images/logo_oricono.png" />
             </div>
+            <div class="col-75">
+              <h1 id="titre_panier">Votre panier est vide</h1>
+            </div>
+          </div>
         </div>
-     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="panier.js"></script>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <main>
+          <!--main-->
+          <div class="container">
+            <table class="table table-dark">
+              <!--tableau récapitulatif-->
+              <thead>
+                <tr>
+                  <th id="Nom_panier">Libellé</th>
+                  <th id="Quantite_panier">Quantité</th>
+                  <th id="Prix_panier">Prix</th>
+                  <th id="Couleur_panier">Couleur</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>0</td>
+                  <td>noir</td>
+                </tr>
+              </tbody>
+              <input type="submit" value="vider le panier" id="clear">
+              <!--supprimer-->
+            </table>
+          </div>
+          <h2 id="total">total:</h2>
+        </main>
+        <div class="container">
+          <form class="formulaire">
+            <div class="row">
+              <div class="col-25">
+                <label for="Nom">Nom</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="Nom" name="Nom" placeholder="Nom">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="Prenom">Prénom</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="Prenom" name="lastname" placeholder="Prénom">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="Email">Email</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="Email" name="firstname" placeholder="Email valide">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="Email2">Email de confirmation</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="Email2" name="firstname" placeholder="Email de confirmation">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="mdp">Mot de passe</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="mdp" name="firstname" placeholder="Mot de passe">
+              </div>
+              <div class="row" id="submit">
+                <input type="submit" value="Confirmer la commande" id="Confirmer_la_commande" required
+                  href="confirmation_de_commande.html">
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <footer>
+    <div class="jumbotron text-center" style="margin-bottom:0">
+      <p>contact</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="panier.js"></script>
 </body>
+
 </html>
