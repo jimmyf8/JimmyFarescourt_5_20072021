@@ -26,15 +26,6 @@ input {
   outline: none;
 }
 
-table {
-  border-collapse: collapse;
-}
-
-td, th {
-  border: 1px solid white;
-  color: black;
-}
-
 .card {
   -webkit-box-shadow: 0 100px 200px rgba(0, 0, 0, 0.01), 0 2px 6px black;
           box-shadow: 0 100px 200px rgba(0, 0, 0, 0.01), 0 2px 6px black;
@@ -88,6 +79,12 @@ td, th {
 .table {
   min-width: 10px;
   background-color: white;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid white;
+  color: black;
 }
 
 #total {
@@ -140,7 +137,7 @@ td, th {
 }
 
 /* Style inputs, select elements and textareas */
-input[type=text], select, textarea {
+input[type=text], select, textarea, #Email, #Email2, #mdp {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;

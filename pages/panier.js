@@ -33,29 +33,19 @@ clear.onclick = () =>{
     localStorage.clear();
     document.location.reload();//recharge la page
 }
-//écoute le formulaire
-console.log(document.forms["inscription"],["email_confirmation"]);
-//validation du formulaire
+//écoute du formulaire
+document.getElementById("formulaire").addEventListener("submit", function(){
+   
+    var erreur;
+    var inputs = document.getElementById("input");
 
-document.forms["inscription"].addEventListener("submit", function(e) {
-    let erreur;
-    let inputs = document.getElementById("inscription").getElementsByTagName("input");
-
-    for (let i = 0; i < inputs.length; i++) {
-        console.log(inputs[i]);
-        if (!inputs[i].value) {
-            erreur = "Veuillez renseigner tous les champs"
-        }
-    }
-  
-    if (erreur) {
+    if (erreur){
         e.preventDefault();
         document.getElementById("erreur").innerHTML = erreur;
         return false;
-    } else {
-        alert('Formulaire envoyé!');
+    } else{
+        alert('Formulaire envoyé!')
     }
-
     
 });
 

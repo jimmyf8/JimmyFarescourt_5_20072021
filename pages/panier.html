@@ -77,13 +77,13 @@
           <h2 id="total">total:</h2>
         </main>
         <div class="container">
-          <form class="formulaire">
+          <form id="formulaire">
             <div class="row">
               <div class="col-25">
                 <label for="Nom">Nom</label>
               </div>
               <div class="col-75">
-                <input type="text" id="Nom" name="Nom" placeholder="Nom">
+                <input type="text" id="Nom" name="Nom"  placeholder="Nom" required>
               </div>
             </div>
             <div class="row">
@@ -91,7 +91,7 @@
                 <label for="Prenom">Prénom</label>
               </div>
               <div class="col-75">
-                <input type="text" id="Prenom" name="Prenom" placeholder="Prénom">
+                <input type="text" id="Prenom" name="Prenom"  placeholder="Prénom" required>
               </div>
             </div>
             <div class="row">
@@ -99,7 +99,7 @@
                 <label for="Email">Email</label>
               </div>
               <div class="col-75">
-                <input type="text" id="Email" name="Email" placeholder="Email valide">
+                <input  id="Email" name="Email" type="email" placeholder="Email valide" required>
               </div>
             </div>
             <div class="row">
@@ -107,7 +107,7 @@
                 <label for="Email2">Email de confirmation</label>
               </div>
               <div class="col-75">
-                <input type="text" id="Email2" name="firstname" placeholder="Email de confirmation">
+                <input  id="Email2" name="Email2" type="email" placeholder="Email de confirmation" required>
               </div>
             </div>
             <div class="row">
@@ -115,13 +115,14 @@
                 <label for="mdp">Mot de passe</label>
               </div>
               <div class="col-75">
-                <input type="text" id="mdp" name="firstname" placeholder="Mot de passe">
+                <input  id="mdp" name="mdp" type="password" placeholder="Mot de passe" required>
               </div>
               <div class="row" id="submit">
                 <input type="submit" value="Confirmer la commande" id="Confirmer_la_commande" required
                   href="confirmation_de_commande.html">
               </div>
           </form>
+          <p id="erreur"></p>
         </div>
       </div>
     </div>

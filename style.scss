@@ -30,17 +30,7 @@ input:valid{
 input{
     outline: none;
 }
-//tableau
 
-table
-{
-    border-collapse: collapse;
-}
-td, th /* Mettre une bordure sur les td ET les th */
-{
-    border: 1px solid rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-}
 //carte
 .card{
     box-shadow: 0 100px 200px rgba(0, 0, 0, 0.01), 0 2px 6px rgba(0, 0, 0, 41.2);
@@ -92,6 +82,14 @@ box-shadow:0 5px 108px #4975b3, 0 1px 0px black;
 .table{
     min-width: 10px;
     background-color: rgb(255, 255, 255);
+    border-collapse: collapse;
+}
+
+
+td, th /* Mettre une bordure sur les td ET les th */
+{
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 #total{
     color: rgb(255, 255, 255);
@@ -137,7 +135,7 @@ box-shadow:0 5px 108px #4975b3, 0 1px 0px black;
     width: 100%;
 }
 /* Style inputs, select elements and textareas */
-input[type=text], select, textarea{
+input[type=text], select, textarea, #Email, #Email2, #mdp {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -145,6 +143,7 @@ input[type=text], select, textarea{
     box-sizing: border-box;
     resize: vertical;
 }
+
   
 /* Style the label to display next to the inputs */
   label {
