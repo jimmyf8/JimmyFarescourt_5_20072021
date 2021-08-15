@@ -4,7 +4,7 @@ Confirmer_la_commande.onclick = () =>{
     localStorage.setItem("Prénom",Prenom.value);
     localStorage.setItem("Email",Email.value);
     
-    document.location.reload();
+    
 }
 //affiche message de confirmation
 function displayMessage(message) {

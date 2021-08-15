@@ -39,7 +39,7 @@ table
 td, th /* Mettre une bordure sur les td ET les th */
 {
     border: 1px solid rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 //carte
 .card{
@@ -86,6 +86,12 @@ box-shadow:0 5px 108px #4975b3, 0 1px 0px black;
 //titre panier
 #titre_panier{
     color: rgb(0, 0, 0);
+}
+
+//tableau
+.table{
+    min-width: 10px;
+    background-color: rgb(255, 255, 255);
 }
 #total{
     color: rgb(255, 255, 255);
