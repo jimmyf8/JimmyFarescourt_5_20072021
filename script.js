@@ -11,8 +11,8 @@ async function main() {
 //récupère les données
 function getArticles() {
   return fetch("http://localhost:3000/api/teddies")
-    .then(function(httpBodyResponse) {
-      return httpBodyResponse.json()
+    .then(function(Response) {
+      return Response.json()
     })
     .then(function(articles) {
       return articles
