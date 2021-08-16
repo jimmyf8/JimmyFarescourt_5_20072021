@@ -57,7 +57,7 @@ data [data.length] = maDonneeNom;
 
 console.log(data);
 
-var Nom = localStorage.getElementById("resultat_panier").textContent = maDonneeQuantite;
+
 
 
 //function
