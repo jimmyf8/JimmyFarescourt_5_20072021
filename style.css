@@ -5,7 +5,7 @@ body {
 }
 
 body #logo {
-  width: 90%;
+  width: 100%;
 }
 
 nav ul li:hover {
@@ -202,5 +202,23 @@ input[type=submit] {
 
 footer {
   font-family: 'Anton', sans-serif;
+}
+
+#main {
+  margin: 10px;
+}
+
+#main:hover {
+  -webkit-transform: scale(1.03, 1.03);
+          transform: scale(1.03, 1.03);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  opacity: 0.9;
+}
+
+div.jumbotron.text-center {
+  width: 94%;
+  margin-left: 2%;
+  margin-top: 2%;
 }
 /*# sourceMappingURL=style.css.map */

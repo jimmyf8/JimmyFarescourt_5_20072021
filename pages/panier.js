@@ -51,13 +51,13 @@ document.getElementById("formulaire").addEventListener("submit", function(){
 
 //tableau
 let data = [];
-data [data.length] = article.name;
-data [data.length] =maDonneeQuantite;
-data [data.length] = "Prix";
+data [data.length] = maDonneeQuantite;
+data [data.length] =maDonneePrix;
+data [data.length] = maDonneeNom;
 
 console.log(data);
 
-var Nom = localStorage.getElementById("Nom_panier").textContent = maDonneeQuantite;
+var Nom = localStorage.getElementById("resultat_panier").textContent = maDonneeQuantite;
 
 
 //function
@@ -66,17 +66,25 @@ function getStoredTeddies () {
     let storedTeddies = Json.parse(localStorage.getItem('addTeddy'))
     if (storedTeddies) {
         let table ='';
-        table +=  ` <table>
-                        <thead>
-                            <th id="Nom_panier">Libellé</th>
-                            <th id="Quantite_panier">Quantité</th>
-                            <th id="Prix_panier">Prix</th>
-                            <th id="Couleur_panier">Couleur</th>
-                        </thead>
-                        <tbody>
-                            getTeddies(storedTeddies);
-                        </tbody>  
-                    </table>`
+        table +=  `  <table class="table table-dark">
+        <thead>
+          <tr>
+            <th id="Nom_panier">Libellé</th>
+            <th id="Quantite_panier">Quantité</th>
+            <th id="Prix_panier">Prix</th>
+            <th id="Couleur_panier">Couleur</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John</td>
+            <td id ="resultat_panier">Doe</td>
+            <td>0</td>
+            <td>noir</td>
+          </tr>
+        </tbody>
+        <input type="submit" value="vider le panier" id="clear">
+      </table>`
                 document.querySelector('').innerHTML = table
     }
 }
@@ -85,7 +93,7 @@ function getTeddies(storedTeddies) {
     let result ='';
     for (teddy of storedTeddies) {
         result +=   `<th>Libellé</th>
-                    <th>maDonneeQuantite</th>
+                    <th id ="resultat_panier">maDonneeQuantite</th>
                     <th>article.name/th>
                     <th>Couleur</th>  
                     <td><button><span class=" glyphicon glyphicon-remove">"onclick"</span></button></td>`  

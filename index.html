@@ -11,10 +11,10 @@
     <title>Oricono</title>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <header><!--header-->
+    <header><!--header-->
+        <div class="container">
+            <div class="row">
+                <div class="col">
                     <nav class="col navbar navbar-expand navbar-dark">
                         <a class="navbar-brand" href="index.html">Oricono</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
@@ -36,27 +36,28 @@
                             </div>
                         </div>
                     </nav>
-                </header>
-            </div>
-        </div>
-        <div class="jumbotron text-center">
-            <div class="row">
-                <div class="col-25">
-                    <img  id ="logo" src="images/logo_oricono.png"/>
-                </div>
-                <div class="col-75">
-                    <h1 id="titre">Bienvenue sur Oricono!</h1>
                 </div>
             </div>
+            <div class="jumbotron text-center">
+                <div class="row">
+                    <div class="col-25">
+                        <img  id ="logo" src="images/logo_oricono.png"/>
+                    </div>
+                    <div class="col-75">
+                        <h1 id="titre">Bienvenue sur Oricono!</h1>
+                    </div>
+                </div>
+            </div>    
         </div>
-        <div class="container"><!--cartes-->
+    </header>
+    <section>
+        <div class="jumbotron text-center"><!--cartes-->
             <div class="row">
                 <div class="col" id="col">
                     <div  class="card" id="main">
                         <template id="templateArticle">
-                            <img class="card-img-top" src="" alt="Card image cap" id="img">
-                            </div>
-                            <div>
+                            <div class="style">
+                                <img class="card-img-top" src="" alt="Card image cap" id="img">
                                 <div class="card-body">
                                     <h2><span class="badge badge-secondary" id="name">New</span></h2>
                                     <p class="card-text-description" id="description"></p>
@@ -70,13 +71,14 @@
                 
             </div>    
         </div>
-        
-        <footer>
-            <div class="jumbotron text-center" style="margin-bottom:0">
-              <p>contact</p>
-            </div>
-        </footer>
-    </div>
+    </section>
+       
+  
+    <footer>
+        <div class="jumbotron text-center" style="margin-bottom:0">
+          <p>contact</p>
+        </div>
+    </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="script.js"></script>
