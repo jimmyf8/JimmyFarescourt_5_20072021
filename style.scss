@@ -82,7 +82,7 @@ box-shadow:0 5px 108px #4975b3, 0 1px 0px black;
 
 //tableau
 .table{
-    min-width: 10px;
+  
     background-color: rgb(255, 255, 255);
     border-collapse: collapse;
 }
@@ -222,4 +222,7 @@ div.jumbotron{
     width: 84%;
    margin-left: 7.8%;
    margin-top: 2%;
+}
+#templateArticle{
+    margin: 10px;
 }

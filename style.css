@@ -78,7 +78,6 @@ input {
 }
 
 .table {
-  min-width: 10px;
   background-color: white;
   border-collapse: collapse;
 }
@@ -223,5 +222,9 @@ div.jumbotron {
   width: 84%;
   margin-left: 7.8%;
   margin-top: 2%;
+}
+
+#templateArticle {
+  margin: 10px;
 }
 /*# sourceMappingURL=style.css.map */
