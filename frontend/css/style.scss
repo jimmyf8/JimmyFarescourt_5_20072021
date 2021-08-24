@@ -1,0 +1,86 @@
+body{
+    background:rgb(103, 119, 134);
+   
+    
+    
+    #logo{
+        width:80%;
+    }
+    
+}
+
+
+
+input:valid{
+    border: 1px solid green;
+}
+input{
+    outline: none;
+}
+
+table
+{
+    border-collapse: collapse;
+}
+//td, th /* Mettre une bordure sur les td ET les th */
+//{
+//    border: 1px solid rgb(255, 255, 255);
+//}
+
+// .container_template{
+//     display: flex;
+    
+//     margin: 50px;
+    
+// }
+// .template{
+//     display: flex;
+    
+//     margin: 10px;
+    
+#img{
+        width: 50%;   
+    }
+// }
+  
+// div.col{
+//     width: 100%;
+
+// }
+.style{
+    display: flex;
+    padding: 100px;
+    &:hover{
+       transform: scale(1.13, 1.03);
+       transition: 0.3s ease;
+       box-shadow:0 5px 18px #4975b3, 0 1px 0px black;
+    }
+}
+
+
+@media screen and (max-width:768px){
+    .style{
+        flex-direction: column;
+        padding: 10px;
+    }
+    #img{
+        width: 100%;   
+    }
+}
+
+#confirm{
+    color:rgb(1, 83, 21);
+}
+
+///boutons
+//vider le panier
+#clear{
+    background-color: rgb(241, 90, 148);
+    color: white;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}

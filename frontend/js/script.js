@@ -5,16 +5,14 @@ async function main() {
   for (article of articles) {
     displayArticle(article)
   }
-  
-  
 }
 //récupère les données
 function getArticles() {
   return fetch("http://localhost:3000/api/teddies")
-    .then(function(Response) {
-      return Response.json()
+    .then((httpBodyResponse) => {
+      return httpBodyResponse.json()
     })
-    .then(function(articles) {
+    .then((articles) => {
       return articles
     })
     .catch(function(error) {
@@ -24,17 +22,18 @@ function getArticles() {
 //implante dans le html
 function displayArticle(article) {
   const templateElt = document.getElementById("templateArticle")
+  templateElt.style.marginTop = 100;//style
   const cloneElt = document.importNode(templateElt.content, true)
 
   cloneElt.getElementById("name").textContent = article.name
   cloneElt.getElementById("price").textContent = (article.price / 100) + ",00 €"
   cloneElt.getElementById("description").textContent = article.description
   cloneElt.getElementById("img").src = article.imageUrl
-  cloneElt.getElementById("click").href += `?id = ${article._id}`
-
-  
+  cloneElt.getElementById("click").href += '?id='+ article._id
   document.getElementById("main").appendChild(cloneElt)
 }
 
 //style
-document.getElementsByClassName('p');
+
+
+
