@@ -1,15 +1,46 @@
+//police
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
 body{
-    background:rgb(103, 119, 134);
+    background:#4975b3;
    
-    
-    
-    #logo{
-        width:80%;
+
+    #logo_nav{
+        width: 65%;
+        border-radius:9px;
+        display: flex;
+        justify-content: flex-end;
+        @media screen and (max-width:768px){
+            width: 40vmax;
+        }
+        
     }
+   
     
 }
 
+//navigation
+//navigation
 
+#titre{
+    color: #4975b3;
+    font-size: 8vmax;
+    text-align: center;
+}
+nav ul li:hover 
+{
+border-top: solid 2.5px rgb(241, 90, 148);
+transition-duration: 0.2s;
+}
+
+i .fa-shopping-basket {
+    :hover{
+       color: rgb(241, 90, 148);
+    }
+}
+
+p,button,li,a{
+    font-family: 'Roboto Condensed', sans-serif;
+}
 
 input:valid{
     border: 1px solid green;
@@ -83,4 +114,41 @@ table
     border-radius: 4px;
     cursor: pointer;
     float: right;
+}
+#h1_panier{
+    color:white;
+}
+
+#h2_panier{
+    color:white;
+}
+
+
+
+/*****************formulaire******************/
+#formulaire{
+    color: white;
+}
+
+
+
+#confirmation{
+    background-color: rgb(241, 90, 148);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+//Recapitulatif
+#recapitulatif{
+    background-color: rgb(251, 223, 228);
+    padding: 40px;
+    border-radius: 22px;
 }

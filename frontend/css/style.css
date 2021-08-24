@@ -1,9 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
 body {
-  background: #677786;
+  background: #4975b3;
 }
 
-body #logo {
-  width: 80%;
+body #logo_nav {
+  width: 65%;
+  border-radius: 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  body #logo_nav {
+    width: 40vmax;
+  }
+}
+
+#titre {
+  color: #4975b3;
+  font-size: 8vmax;
+  text-align: center;
+}
+
+nav ul li:hover {
+  border-top: solid 2.5px #f15a94;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+i .fa-shopping-basket :hover {
+  color: #f15a94;
+}
+
+p, button, li, a {
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 input:valid {
@@ -64,5 +98,42 @@ table {
   border-radius: 4px;
   cursor: pointer;
   float: right;
+}
+
+#h1_panier {
+  color: white;
+}
+
+#h2_panier {
+  color: white;
+}
+
+/*****************formulaire******************/
+#formulaire {
+  color: white;
+}
+
+#confirmation {
+  background-color: #f15a94;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+#recapitulatif {
+  background-color: #fbdfe4;
+  padding: 40px;
+  border-radius: 22px;
 }
 /*# sourceMappingURL=style.css.map */

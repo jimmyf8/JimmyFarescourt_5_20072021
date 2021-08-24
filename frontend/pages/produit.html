@@ -15,9 +15,8 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <header><!--header-->
+                <header><!--header--> 
                     <nav class="col navbar navbar-expand navbar-dark">
-                        <a class="navbar-brand" href="index.html">Oricono</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
                             <span class="navbar-toggler-icon">Ours</span>
                         </button>
@@ -27,16 +26,22 @@
                                     <a class="nav-link" href="../index.html">Accueil</a>
                                 </li>
                                  <li class="nav-item">
-                                    <a class="nav-link" href="panier.html"><i class="fas fa-shopping-basket"></i></a>
+                                    <a class="nav-link" href="panier.html"><i class="fas fa-shopping-cart"></i></i></a>
                                 </li>
                             </ul>
                         </div>
-                        <div class="row mb"><!--recherche-->
+                    </nav>
+                    <div class="jumbotron text-center">
+                        <div class="row">
                             <div class="col">
-                               <input class="form-control" id="searchInput" type="text" placeholder="Rechercher des teddies">
+                                <a class="nav-link" href="../index.html"> <img  id ="logo_nav" src="../images/logo_oricono.png"/></a>
+                            </div>
+                            <div class="col-45">
+                                <h1 id="titre">Oricono!</h1>
                             </div>
                         </div>
-                    </nav>
+                    </div>    
+                </div>
                 </header>
             </div>
         </div>
@@ -58,7 +63,7 @@
                             <select name="color" id="select">
                             </select>
                             <label for="btn_panier">
-                                <button   id ="btn_panier" >ajouter au panier</button><!--ajout au panier-->
+                                <button onmouseover="document.body.style.backgroundColor='pink'" onmouseout="document.body.style.backgroundColor='#4975b3'"  id ="btn_panier" >ajouter au panier</button><!--ajout au panier-->
                             </label><br/>
                             <a href="../index.html" id="click" class="btn btn-primary">retour à l'accueil</a>
                         </div>

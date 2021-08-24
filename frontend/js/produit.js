@@ -1,16 +1,4 @@
-// //hydrate les données du produit
-// (async function(){
-//   const articleId = getArticleId()
-//   const article = await getArticle(articleId)
-//   // hydrateArticle(article)
-//
-// })()
-// //récupère l'id
-// function getArticleId() {
-//   const queryString_url_id = window.location.search;
-//   const getArticleId = queryString_url_id.slice(10);
-//   return getArticleId
-// }
+
 const urlParams = new URLSearchParams(window.location.search)
 const articleId = urlParams.get('id')
 //récupère le produit
@@ -53,14 +41,19 @@ function  getDataTeddies(article) {
             price: article['price']/100,
         }
         let storedTeddies = JSON.parse(localStorage.getItem('addTeddy'))
+        let body = document.querySelector('body');
+        body.style.backgroundColor = 'black';
         if (storedTeddies) {
             storedTeddies.push(teddiesChosen);
             localStorage.setItem('addTeddy', JSON.stringify(storedTeddies));
+            
+               
             popupConfirmation(article);
         } else {
             storedTeddies = [];
             storedTeddies.push(teddiesChosen);
             localStorage.setItem('addTeddy', JSON.stringify(storedTeddies));
+            
             popupConfirmation(article);
         }
     });

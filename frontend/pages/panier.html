@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,92 +9,110 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="../css/style.css">
     <title>Orinoco</title>
+    <!--titre-->
 </head>
+
 <body>
     <div class="container">
         <div class="row">
-           <div class="col">
-            <header><!--header-->
-                <nav class="col navbar navbar-expand navbar-dark">
-                    <a class="navbar-brand" href="../index.html">Orinoco</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
-                       <span class="navbar-toggler-icon">Ours</span>
-                    </button>
-                    <div id="navbarContent" class="collapse navbar-collapse">
-                       <ul class="navbar-nav">
-                          <li class="nav-item active">
-                             <a class="nav-link" href="../index.html">Accueil</a>
-                          </li>
-                       </ul>
+            <div class="col">
+                <header>
+                    <!--header-->
+                    <nav class="col navbar navbar-expand navbar-dark">
+                        <!--navigation-->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarContent">
+                            <span class="navbar-toggler-icon">Ours</span>
+                        </button>
+                        <div id="navbarContent" class="collapse navbar-collapse">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="../index.html">Accueil</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="jumbotron text-center">
+                        <div class="row">
+                            <div class="col">
+                                <a class="nav-link" href="../index.html"> <img id="logo_nav"
+                                        src="../images/logo_oricono.png" /></a>
+                            </div>
+                            <div class="col-45">
+                                <h1 id="titre">Oricono!</h1>
+                            </div>
+                        </div>
                     </div>
-                 </nav>
-            </header>
-            <h1 id="h1_panier">votre panier est vide</h1>
-           </div>
+                </header>
+                <h1 id="h1_panier">Votre panier est vide</h1>
+                <!--titre-->
+            </div>
         </div>
         <div class="row">
             <div class="col">
-                <table class="table" style="background-color: white"><!--tableau récapitulatif-->
+                <table class="table" style="background-color: white">
+                    <!--tableau récapitulatif-->
                     <thead>
-                    <th>Libellé</th>
-                    <th>Couleur</th>
-                    <th>Quantité</th>
-                    <th>Prix</th>
-                    <th>Total</th>
+                        <th>Libellé</th>
+                        <th>Couleur</th>
+                        <th>Quantité</th>
+                        <th>Prix</th>
+                        <th>Total</th>
                     </thead>
                     <tbody id="contentTeddies">
 
                     </tbody>
                 </table>
                 <h2 id="total"></h2>
-                <button type="submit" class="btn btn-primary" id="clear">vider le  panier</button>
+                <div>
+                    <button type="submit" class="btn btn-primary" id="clear">vider le panier</button>
+                    <!--vider le panier-->
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2 id="h2_panier">Merci de remplir ce formulaire pour valider votre commande</h2>
+            <form id="formulaire">
+                <!--formulaire-->
+                <div class="form-group">
+                    <label for="usr">Votre prénom:</label>
+                    <input type="text" class="form-control" id="prenom" name="prenom" required>
+                </div>
+                <div class="form-group">
+                    <label for="nom">Votre nom:</label>
+                    <input type="text" class="form-control" id="nom" name="nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Votre adresse:</label>
+                    <input type="text" class="form-control" id="adresse" name="adresse" required>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Votre code postal:</label>
+                    <input type="number" class="form-control" id="codePostal" name="codePostal" required>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Votre ville:</label>
+                    <input type="text" class="form-control" id="ville" name="ville" required>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Votre adresse mail:</label>
+                    <input type="text" class="form-control" id="email" name="email" required>
+                </div>
+                <button href="confirmation_de_commande.html" type="submit" class="btn btn-primary" id="confirmation"
+                    onclick="ConfirmMessage()" >Confirmation</button>
+                <!--boutton confirmation-->
+            </form>
+            <div class="row">
+                <div class="col">
+                    
+                </div>
             </div>
         </div>
     </div>
-    <div class="container">
-        <h2>Merci de remplir ce formulaire pour valider votre commande</h2>
-        <form id="formulaire">
-            <div class="form-group">
-                <label for="usr">Votre prénom:</label>
-                <input type="text" class="form-control" id="prenom" name="prenom" required>
-            </div>
-            <div class="form-group">
-                <label for="nom">Votre nom:</label>
-                <input type="text" class="form-control" id="nom" name="nom" required>
-            </div>
-            <div class="form-group">
-                <label for="pwd">Votre adresse:</label>
-                <input type="text" class="form-control" id="adresse" name="adresse" required>
-            </div>
-            <div class="form-group">
-                <label for="pwd">Votre code postal:</label>
-                <input type="number" class="form-control" id="codePostal" name="codePostal" required>
-            </div>
-            <div class="form-group">
-                <label for="pwd">Votre ville:</label>
-                <input type="text" class="form-control" id="ville" name="ville" required>
-            </div>
-            <div class="form-group">
-                <label for="pwd">Votre adresse mail:</label>
-                <input type="text" class="form-control" id="email" name="email" required>
-            </div>
-            <button href="confirmation_de_commande.html" type="submit" class="btn btn-primary" id="confirmation" onclick="ConfirmMessage()"  required>Confirmation</button>
-        </form>
-    </div>
-        <div class="row">
-            <div class="col">
-                <footer><!--footer-->
-                    <ul class=”list-inline”>
-                        <div class="row">
-                            <div class="col-4">
-                                <li class=”list-inline-item”>contact</li>
-                        </div>
-                    </ul>
-                </footer>
-            </div>
-        </div>
-     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
     <script src="../js/panier.js"></script>
 </body>
+
 </html>

@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="../css/style.css">
     <script src="https://kit.fontawesome.com/6d6fa698d7.js" crossorigin="anonymous"></script><!--lien icône-->
-    <title>Oricono</title>
+    <title>Oricono</title><!--titre-->
 </head>
 <body>
     <div class="container">
         <div class="row">
            <div class="col">
             <header><!--header-->
-                <nav class="col navbar navbar-expand navbar-dark">
+                <nav class="col navbar navbar-expand navbar-dark"><!--navigation-->
                     <a class="navbar-brand" href="../index.html">Oricono</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
                        <span class="navbar-toggler-icon">Ours</span>
@@ -37,26 +37,39 @@
         <div class="row">
             <div class="col">
                 <main>
-                    <h1></h1>
+                    
                     <div class="jumbotron">
-                        <div class="col-10">
-                            <img  id ="logo" src="../images/logo_oricono.png"/>
+                        <div class="col">
+                            <img  id ="logo_nav" src="../images/logo_oricono.png"/><!--logo-->
                         </div>
-                        <h1> Oricono vous remercie!</h1>
-                        <h2 id="confirm">Félicitation votre commande sera enoyé à l'adresse suivante:</h2>
-                        <p id="nom"></p><br>
-                        <p id="prenom"></p><br>
-                        <p id="adresse"></p><br>
-                        <p id="ville"></p><br>
-                        <p id="codePostal"></p>
-                        
-                        <a href="../index.html">retour à l'accueil</a>
+                        <div id="recapitulatif">
+                            
+                            <h1> Oricono vous remercie!</h1>
+                            <h2 id="confirm">Votre commande sera envoyé à l'adresse suivante:</h2>
+                            <p id="nom"></p><br>
+                            <p id="prenom"></p><br>
+                            <p id="adresse"></p><br>
+                            <p id="ville"></p><br>
+                            <p id="codePostal"></p>  
+                        </div>
+                        <div class="alert alert-success">
+                            <strong>Success!</strong> Félicitation pour votre commande.<!--message félicitation-->
+                        </div>
+                        <a href="../index.html">retour à l'accueil</a> <!--retour à l'accueil-->
                     </div>
                     
                 </main>
             </div>
         </div>
-        <h1 id="h1"></h1>
+        <footer><!--footer-->
+            <ul class=”list-inline”>
+                <div class="row">
+                    <div class="col">
+                        <li class=”list-inline-item”>contact</li>
+                    </div>
+                </div>
+            </ul>
+        </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="../js/confirmation.js"></script>
 </body>

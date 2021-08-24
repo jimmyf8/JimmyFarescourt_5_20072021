@@ -12,6 +12,8 @@ clear.onclick = () =>{
 }
 
 
+
+
 // //function
 
 function getStoredTeddies () {
@@ -60,7 +62,7 @@ console.log(btnFormulaire);
 
 btnFormulaire.addEventListener("click", ()=>{
     //stocker les saisies dans le local storage
-    
+   
     localStorage.setItem("Nom", document.querySelector("#nom").value);
     localStorage.setItem("Prenom", document.querySelector("#prenom").value);
     localStorage.setItem("Adresse", document.querySelector("#adresse").value);
