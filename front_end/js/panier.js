@@ -69,7 +69,7 @@ btnFormulaire.addEventListener("click", ()=>{
 //validation du formulaire   
 confirmation.onclick = () =>{
     if(localStorage.getItem("Email") != ""){
-                confirm("vous voulez valider la commande?");
+                alert("vous avez validé la commande!");
                 window.open("confirmation_de_commande.html");
             }
 }
