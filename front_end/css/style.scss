@@ -12,6 +12,9 @@ body{
         @media screen and (max-width:768px){
             width: 40vmax;
         }
+        @media screen and (max-width:1040px){
+            width: 45vmax;
+        }
         
     }
     //grand logo
@@ -34,11 +37,17 @@ body{
     color: #4975b3;
     font-size: 4vmax;
     text-align: center;
+    @media screen and (max-width:1040px){
+       display: none;
+    }
 }
 #titre_produit{
     color: #4975b3;
     font-size: 4vmax;
     text-align: center;
+    @media screen and (max-width:1040px){
+        display: none;
+     }
 }
 
 //navigation

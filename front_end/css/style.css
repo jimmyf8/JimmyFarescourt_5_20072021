@@ -21,6 +21,12 @@ body #logo_nav {
 }
 
 @media screen and (max-width: 1040px) {
+  body #logo_nav {
+    width: 45vmax;
+  }
+}
+
+@media screen and (max-width: 1040px) {
   body #logo {
     width: 40vmax;
   }
@@ -36,10 +42,22 @@ body #logo_nav {
   text-align: center;
 }
 
+@media screen and (max-width: 1040px) {
+  #titre {
+    display: none;
+  }
+}
+
 #titre_produit {
   color: #4975b3;
   font-size: 4vmax;
   text-align: center;
+}
+
+@media screen and (max-width: 1040px) {
+  #titre_produit {
+    display: none;
+  }
 }
 
 nav ul li:hover {
