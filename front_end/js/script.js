@@ -22,7 +22,6 @@ function getArticles() {
 //implante dans le html
 function displayArticle(article) {
   const templateElt = document.getElementById("templateArticle")
-  templateElt.style.marginTop = 100;//style
   const cloneElt = document.importNode(templateElt.content, true)
 
   cloneElt.getElementById("name").textContent = article.name
@@ -32,8 +31,6 @@ function displayArticle(article) {
   cloneElt.getElementById("click").href += '?id='+ article._id
   document.getElementById("main").appendChild(cloneElt)
 }
-
-//style
 
 
 

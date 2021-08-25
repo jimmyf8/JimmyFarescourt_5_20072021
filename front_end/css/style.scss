@@ -3,7 +3,7 @@
 body{
     background:#4975b3;
    
-
+    //logo miniature
     #logo_nav{
         width: 65%;
         border-radius:9px;
@@ -14,34 +14,57 @@ body{
         }
         
     }
+    //grand logo
+    #logo{
+        @media screen and (max-width:1040px){
+            width: 40vmax;
+        }
+    }
    
     
 }
 
-//navigation
-//navigation
+//image
+#img{
+    width: 50%;   
+}
 
+//titre
 #titre{
     color: #4975b3;
-    font-size: 8vmax;
+    font-size: 4vmax;
     text-align: center;
 }
+#titre_produit{
+    color: #4975b3;
+    font-size: 4vmax;
+    text-align: center;
+}
+
+//navigation
 nav ul li:hover 
 {
 border-top: solid 2.5px rgb(241, 90, 148);
 transition-duration: 0.2s;
 }
 
+//icône
 i .fa-shopping-basket {
     :hover{
        color: rgb(241, 90, 148);
     }
 }
 
+//paragraphe
 p,button,li,a{
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+p:hover{
+    color:#4975b3 ;
+}
+
+//input
 input:valid{
     border: 1px solid green;
 }
@@ -49,35 +72,8 @@ input{
     outline: none;
 }
 
-table
-{
-    border-collapse: collapse;
-}
-//td, th /* Mettre une bordure sur les td ET les th */
-//{
-//    border: 1px solid rgb(255, 255, 255);
-//}
-
-// .container_template{
-//     display: flex;
-    
-//     margin: 50px;
-    
-// }
-// .template{
-//     display: flex;
-    
-//     margin: 10px;
-    
-#img{
-        width: 50%;   
-    }
-// }
-  
-// div.col{
-//     width: 100%;
-
-// }
+/*****************************accueil************************/
+//carte
 .style{
     display: flex;
     padding: 100px;
@@ -87,7 +83,6 @@ table
        box-shadow:0 5px 18px #4975b3, 0 1px 0px black;
     }
 }
-
 
 @media screen and (max-width:768px){
     .style{
@@ -99,11 +94,14 @@ table
     }
 }
 
-#confirm{
-    color:rgb(1, 83, 21);
+/*****************************produit************************/
+/*****************************panier************************/
+//tableau
+table
+{
+    border-collapse: collapse;
 }
 
-///boutons
 //vider le panier
 #clear{
     background-color: rgb(241, 90, 148);
@@ -114,14 +112,36 @@ table
     border-radius: 4px;
     cursor: pointer;
     float: right;
+    &:hover{
+        background-color: rgb(230, 114, 204);
+    }
 }
+
+//titre panier
 #h1_panier{
     color:white;
 }
 
+//sous titre panier
 #h2_panier{
     color:white;
 }
+
+/*****************************confirmation************************/
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -131,7 +151,7 @@ table
 }
 
 
-
+//b
 #confirmation{
     background-color: rgb(241, 90, 148);
     color: white;
@@ -142,8 +162,11 @@ table
     float: right;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin: 10px 0px 50px 10px;
     width: 100%;
+    &:hover{
+        background-color: rgb(230, 114, 204);
+    }
 }
 
 //Recapitulatif
@@ -151,4 +174,9 @@ table
     background-color: rgb(251, 223, 228);
     padding: 40px;
     border-radius: 22px;
+}
+
+.card-img-top_produit{
+    padding: 50px;
+    border-radius: 102px;
 }

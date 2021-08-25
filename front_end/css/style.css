@@ -20,9 +20,25 @@ body #logo_nav {
   }
 }
 
+@media screen and (max-width: 1040px) {
+  body #logo {
+    width: 40vmax;
+  }
+}
+
+#img {
+  width: 50%;
+}
+
 #titre {
   color: #4975b3;
-  font-size: 8vmax;
+  font-size: 4vmax;
+  text-align: center;
+}
+
+#titre_produit {
+  color: #4975b3;
+  font-size: 4vmax;
   text-align: center;
 }
 
@@ -40,6 +56,10 @@ p, button, li, a {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+p:hover {
+  color: #4975b3;
+}
+
 input:valid {
   border: 1px solid green;
 }
@@ -48,14 +68,7 @@ input {
   outline: none;
 }
 
-table {
-  border-collapse: collapse;
-}
-
-#img {
-  width: 50%;
-}
-
+/*****************************accueil************************/
 .style {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -85,8 +98,10 @@ table {
   }
 }
 
-#confirm {
-  color: #015315;
+/*****************************produit************************/
+/*****************************panier************************/
+table {
+  border-collapse: collapse;
 }
 
 #clear {
@@ -100,6 +115,10 @@ table {
   float: right;
 }
 
+#clear:hover {
+  background-color: #e672cc;
+}
+
 #h1_panier {
   color: white;
 }
@@ -108,6 +127,7 @@ table {
   color: white;
 }
 
+/*****************************confirmation************************/
 /*****************formulaire******************/
 #formulaire {
   color: white;
@@ -127,13 +147,22 @@ table {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 10px;
+  margin: 10px 0px 50px 10px;
   width: 100%;
+}
+
+#confirmation:hover {
+  background-color: #e672cc;
 }
 
 #recapitulatif {
   background-color: #fbdfe4;
   padding: 40px;
   border-radius: 22px;
+}
+
+.card-img-top_produit {
+  padding: 50px;
+  border-radius: 102px;
 }
 /*# sourceMappingURL=style.css.map */

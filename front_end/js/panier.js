@@ -1,10 +1,9 @@
+// le titre indique que le panier est vide
 let h1 = document.querySelector("#h1_panier");
 if(localStorage.getItem("addTeddy") != null)
 h1.textContent = `Mon panier`;
-//
-// //supprimer une donnée dans le local storage
-// //  localStorage.removeItem("Prénom")
-//
+
+
 //supprimer le local storage
 clear.onclick = () =>{
     localStorage.clear();
@@ -14,7 +13,7 @@ clear.onclick = () =>{
 
 
 
-// //function
+//function
 
 function getStoredTeddies () {
     let storedTeddies = JSON.parse(localStorage.getItem('addTeddy'));
@@ -22,7 +21,7 @@ function getStoredTeddies () {
         document.querySelector('#contentTeddies').innerHTML = getTeddies(storedTeddies);
     }
 }
-
+//mettre les données dans le tableau
 function getTeddies(storedTeddies) {
     let som = 0;
     let result = '';
@@ -36,6 +35,7 @@ function getTeddies(storedTeddies) {
             ' </tr>'
          som += teddy.price * teddy.quantity;
     }
+    //total
     document.querySelector('#total').innerHTML = 'Total panier: '+som +'€';
     return result;
 }
@@ -45,14 +45,6 @@ function getSum(value) {
     return sum;
 }
 getStoredTeddies();
-
-// //agir à l'envoi du formulaire
-// let formulaire = document.querySelector('#formulaire');
-// formulaire.addEventListener('#formulaire', (e) => {
-//     e.window.location.href = "confirmation_de_commande.html";
-    
-// });
-
 
 
 
@@ -68,17 +60,20 @@ btnFormulaire.addEventListener("click", ()=>{
     localStorage.setItem("Adresse", document.querySelector("#adresse").value);
     localStorage.setItem("Ville", document.querySelector("#ville").value);
     localStorage.setItem("Code postal", document.querySelector("#codePostal").value);
-    localStorage.setItem("Total", document.querySelector("#price"));
+    localStorage.setItem("Email", document.querySelector("#email").value);
     
     
    
 });
-function ConfirmMessage() {
-    if (confirm("vous voulez valider la commande?")) {
-        // Clic sur OK
-        localStorage.clear();
-    
-        window.open("confirmation_de_commande.html");
-    }
-    
+
+//validation du formulaire   
+confirmation.onclick = () =>{
+    if(localStorage.getItem("Email") != ""){
+                confirm("vous voulez valider la commande?");
+                window.open("confirmation_de_commande.html");
+            }
 }
+    
+
+
+
