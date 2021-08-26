@@ -3,33 +3,10 @@ body {
   background: #4975b3;
 }
 
-body #logo_nav {
-  width: 65%;
+#logo_nav {
+  max-width: 100%;
   border-radius: 9px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-@media screen and (max-width: 768px) {
-  body #logo_nav {
-    width: 40vmax;
-  }
-}
-
-@media screen and (max-width: 1040px) {
-  body #logo_nav {
-    width: 45vmax;
-  }
-}
-
-@media screen and (max-width: 1040px) {
-  body #logo {
-    width: 40vmax;
-  }
+  margin: 0px;
 }
 
 #img {
@@ -40,6 +17,7 @@ body #logo_nav {
   color: #4975b3;
   font-size: 4vmax;
   text-align: center;
+  margin: 40px;
 }
 
 @media screen and (max-width: 1040px) {
@@ -63,7 +41,7 @@ body #logo_nav {
 nav ul li:hover {
   border-top: solid 2.5px #f15a94;
   -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 
 i .fa-shopping-basket :hover {
@@ -96,27 +74,26 @@ input {
 
 .style:hover {
   -webkit-transform: scale(1.13, 1.03);
-          transform: scale(1.13, 1.03);
+  transform: scale(1.13, 1.03);
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   -webkit-box-shadow: 0 5px 18px #4975b3, 0 1px 0px black;
-          box-shadow: 0 5px 18px #4975b3, 0 1px 0px black;
+  box-shadow: 0 5px 18px #4975b3, 0 1px 0px black;
 }
 
 @media screen and (max-width: 768px) {
   .style {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     padding: 10px;
   }
   #img {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
-/*****************************produit************************/
 /*****************************panier************************/
 table {
   border-collapse: collapse;
@@ -138,14 +115,19 @@ table {
 }
 
 #h1_panier {
-  color: white;
+  color: #4975b3;
+  font-size: 6vmax;
+  margin: 30px;
 }
 
 #h2_panier {
   color: white;
 }
 
-/*****************************confirmation************************/
+#total {
+  color: white;
+}
+
 /*****************formulaire******************/
 #formulaire {
   color: white;
@@ -163,8 +145,8 @@ table {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: 10px 0px 50px 10px;
   width: 100%;
 }
@@ -180,7 +162,15 @@ table {
 }
 
 .card-img-top_produit {
-  padding: 50px;
-  border-radius: 102px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 50px;
+  border-radius: 12px;
+}
+
+/**************footer***************/
+footer {
+  margin-top: 20px;
 }
 /*# sourceMappingURL=style.css.map */

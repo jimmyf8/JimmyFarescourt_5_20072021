@@ -1,191 +1,183 @@
-//police
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
-body{
-    background:#4975b3;
-   
-    //logo miniature
-    #logo_nav{
-        width: 65%;
-        border-radius:9px;
-        display: flex;
-        justify-content: flex-end;
-        @media screen and (max-width:768px){
-            width: 40vmax;
-        }
-        @media screen and (max-width:1040px){
-            width: 45vmax;
-        }
-        
-    }
-    //grand logo
-    #logo{
-        @media screen and (max-width:1040px){
-            width: 40vmax;
-        }
-    }
-   
-    
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
+body {
+  background: #4975b3;
 }
 
-//image
-#img{
-    width: 50%;   
+ #logo_nav {
+  max-width: 100%;
+  border-radius: 9px;
+  margin: 0px;
+ 
 }
 
-//titre
-#titre{
-    color: #4975b3;
-    font-size: 4vmax;
-    text-align: center;
-    @media screen and (max-width:1040px){
-       display: none;
-    }
-}
-#titre_produit{
-    color: #4975b3;
-    font-size: 4vmax;
-    text-align: center;
-    @media screen and (max-width:1040px){
-        display: none;
-     }
+
+
+#img {
+  width: 50%;
+  
 }
 
-//navigation
-nav ul li:hover 
-{
-border-top: solid 2.5px rgb(241, 90, 148);
-transition-duration: 0.2s;
+#titre {
+  color: #4975b3;
+  font-size: 4vmax;
+  text-align: center;
+  margin: 40px;
 }
 
-//icône
-i .fa-shopping-basket {
-    :hover{
-       color: rgb(241, 90, 148);
-    }
+@media screen and (max-width: 1040px) {
+  #titre {
+    display: none;
+  }
 }
 
-//paragraphe
-p,button,li,a{
-    font-family: 'Roboto Condensed', sans-serif;
+#titre_produit {
+  color: #4975b3;
+  font-size: 4vmax;
+  text-align: center;
 }
 
-p:hover{
-    color:#4975b3 ;
+@media screen and (max-width: 1040px) {
+  #titre_produit {
+    display: none;
+  }
 }
 
-//input
-input:valid{
-    border: 1px solid green;
+nav ul li:hover {
+  border-top: solid 2.5px #f15a94;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
-input{
-    outline: none;
+
+i .fa-shopping-basket :hover {
+  color: #f15a94;
+}
+
+p, button, li, a {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+p:hover {
+  color: #4975b3;
+}
+
+input:valid {
+  border: 1px solid green;
+}
+
+input {
+  outline: none;
 }
 
 /*****************************accueil************************/
-//carte
-.style{
-    display: flex;
-    padding: 100px;
-    &:hover{
-       transform: scale(1.13, 1.03);
-       transition: 0.3s ease;
-       box-shadow:0 5px 18px #4975b3, 0 1px 0px black;
-    }
+.style {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 100px;
 }
 
-@media screen and (max-width:768px){
-    .style{
-        flex-direction: column;
-        padding: 10px;
-    }
-    #img{
-        width: 100%;   
-    }
+.style:hover {
+  -webkit-transform: scale(1.13, 1.03);
+          transform: scale(1.13, 1.03);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-box-shadow: 0 5px 18px #4975b3, 0 1px 0px black;
+          box-shadow: 0 5px 18px #4975b3, 0 1px 0px black;
 }
 
-/*****************************produit************************/
+@media screen and (max-width: 768px) {
+  .style {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px;
+  }
+  #img {
+    max-width: 100%;
+  
+  }
+}
+
+
 /*****************************panier************************/
-//tableau
-table
-{
-    border-collapse: collapse;
+table {
+  border-collapse: collapse;
+  
 }
 
-//vider le panier
-#clear{
-    background-color: rgb(241, 90, 148);
-    color: white;
-    padding: 12px 20px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-    &:hover{
-        background-color: rgb(230, 114, 204);
-    }
+#clear {
+  background-color: #f15a94;
+  color: white;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
 }
 
-//titre panier
-#h1_panier{
-    color:white;
+#clear:hover {
+  background-color: #e672cc;
 }
 
-//sous titre panier
+#h1_panier {
+  color: #4975b3;
+  font-size: 6vmax;
+  margin: 30px;
+}
+
 #h2_panier{
-    color:white;
+    color: white;
 }
 
-/*****************************confirmation************************/
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
+#total {
+  color: white;
+}
 
 
 /*****************formulaire******************/
-#formulaire{
-    color: white;
+#formulaire {
+  color: white;
 }
 
-
-//b
-#confirmation{
-    background-color: rgb(241, 90, 148);
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-    display: flex;
-    justify-content: center;
-    margin: 10px 0px 50px 10px;
-    width: 100%;
-    &:hover{
-        background-color: rgb(230, 114, 204);
-    }
+#confirmation {
+  background-color: #f15a94;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 0px 50px 10px;
+  width: 100%;
 }
 
-//Recapitulatif
-#recapitulatif{
-    background-color: rgb(251, 223, 228);
-    padding: 40px;
-    border-radius: 22px;
+#confirmation:hover {
+  background-color: #e672cc;
 }
 
-.card-img-top_produit{
-    padding: 50px;
-    border-radius: 102px;
+#recapitulatif {
+  background-color: #fbdfe4;
+  padding: 40px;
+  border-radius: 22px;
+}
+
+.card-img-top_produit {
+  align-self: center;
+  margin: 50px;
+  border-radius: 12px;
+  
+}
+
+/**************footer***************/@at-root
+
+footer{
+    margin-top: 20px;
 }

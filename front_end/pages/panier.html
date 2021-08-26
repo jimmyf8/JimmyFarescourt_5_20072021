@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col">
                 <header>
@@ -32,17 +32,18 @@
                             </ul>
                         </div>
                     </nav>
-                    <div class="jumbotron text-center">
+                    <div class="jumbotron">
                         <div class="row">
-                            <div class="col">
-                                <a class="nav-link" href="../../index.html"> <img id="logo"
-                                        src="../images/logo_oricono.png" /></a>
+                            <div class="col-sm-4">
+                                <a class="nav-link" href="../../index.html"> <img  id ="logo_nav" src="../images/logo_oricono.png"/></a>
                             </div>
-
+                            <div class="col-sm-8">
+                                <h1 id="h1_panier">Votre panier est vide</h1>
+                            </div>
                         </div>
-                    </div>
+                    </div>    
                 </header>
-                <h1 id="h1_panier">Votre panier est vide</h1>
+                
                 <!--titre-->
             </div>
         </div>
@@ -106,6 +107,11 @@
             </div>
         </div>
     </div>
+    <footer>
+        <div class="jumbotron text-center" style="margin-bottom:0">
+          <p>contact</p>
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
