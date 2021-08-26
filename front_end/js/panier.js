@@ -4,6 +4,23 @@ if(localStorage.getItem("addTeddy") != null)
 h1.textContent = `Mon panier`;
 
 
+//si le panier est vide
+let formulaireSupp = document.querySelector('#formulaire');
+let tableau = document.querySelector('#table');
+let btnClear = document.querySelector('#clear');
+let h2Panier = document.querySelector('#h2_panier');
+
+if(h1.textContent != `Mon panier`){
+    formulaireSupp.style.display = 'none';
+    table.style.display = 'none';
+    btnClear.style.display = 'none';
+    h2Panier.style.display = 'none';
+
+}
+
+
+
+
 //supprimer le local storage
 clear.onclick = () =>{
     localStorage.clear();
