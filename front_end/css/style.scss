@@ -83,6 +83,9 @@ input {
   transition: 0.3s ease;
   -webkit-box-shadow: 0 5px 18px #4975b3, 0 1px 0px black;
           box-shadow: 0 5px 18px #4975b3, 0 1px 0px black;
+          @media screen and (max-width: 768px) {
+            transform: scale(1.01, 1.01);
+          }
 }
 
 @media screen and (max-width: 768px) {

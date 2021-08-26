@@ -82,6 +82,13 @@ input {
 }
 
 @media screen and (max-width: 768px) {
+  .style:hover {
+    -webkit-transform: scale(1.01, 1.01);
+            transform: scale(1.01, 1.01);
+  }
+}
+
+@media screen and (max-width: 768px) {
   .style {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
