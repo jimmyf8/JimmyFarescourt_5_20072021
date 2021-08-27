@@ -1,6 +1,7 @@
 //Récupère l'id
 const urlParams = new URLSearchParams(window.location.search)
 const articleId = urlParams.get('id')
+localStorage.setItem("Id",articleId );
 
 //récupère le produit
 fetch(`http://localhost:3000/api/teddies/${articleId}`)

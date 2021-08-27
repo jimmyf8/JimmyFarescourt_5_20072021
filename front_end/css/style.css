@@ -176,6 +176,11 @@ table {
   border-radius: 12px;
 }
 
+/*****************confirmation******************/
+#total {
+  color: black;
+}
+
 /**************footer***************/
 footer {
   margin-top: 20px;

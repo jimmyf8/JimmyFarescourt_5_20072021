@@ -42,6 +42,8 @@ function getStoredTeddies () {
 function getTeddies(storedTeddies) {
     let som = 0;
     let result = '';
+    
+   
     for(teddy of storedTeddies) {
         result += '<tr>\n' +
             '        <td>'+teddy.name+'</td>\n' +
@@ -51,9 +53,12 @@ function getTeddies(storedTeddies) {
             '        <td>'+teddy.price * teddy.quantity+' €</td>\n' +
             ' </tr>'
          som += teddy.price * teddy.quantity;
+         
     }
     //total
     document.querySelector('#total').innerHTML = 'Total panier: '+som +'€';
+    let total = som;
+    localStorage.setItem("Total",total );
     return result;
 }
 function getSum(value) {
@@ -78,6 +83,9 @@ btnFormulaire.addEventListener("click", ()=>{
     localStorage.setItem("Ville", document.querySelector("#ville").value);
     localStorage.setItem("Code postal", document.querySelector("#codePostal").value);
     localStorage.setItem("Email", document.querySelector("#email").value);
+ 
+    
+   
     
     
    
