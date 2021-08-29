@@ -34,33 +34,3 @@ logo_nav.onclick = () =>{
 }
 
 
-//création d'un objet
-
-const newUser = {
-    lastName: "Nom",
-    firstName: "Prenom",
-    adress: "adress",
-    city: "Ville",
-    email: "Email",
-   
-};
-
-const promise = fetch("http://localhost:3000/api/teddies/order", {
-    method:"POST",
-    body: JSON.stringify(newUser),
-    headers:{
-        "Content-Type": "application/json",
-    },
-});
-
-promise.then(async (response) => {
-    try{
-        console.log(response);
-        const contenu = await response.json();
-        console.log(contenu);
-
-    }
-    catch (e) {
-        console.log(e);
-    }
-});

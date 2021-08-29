@@ -93,12 +93,51 @@ btnFormulaire.addEventListener("click", ()=>{
 
 //validation du formulaire   
 confirmation.onclick = () =>{
-    if(localStorage.getItem("Email") != ""){
+    if(localStorage.getItem("Email") != "" && localStorage.getItem("Ville") != "" && localStorage.getItem("Nom") != "" && localStorage.getItem("Prenom") != "" && localStorage.getItem("Adresse") != ""&& localStorage.getItem("Code postal") != "" ){
                 alert("vous avez validé la commande!");
                 window.open("confirmation_de_commande.html");
             }
 }
     
+
+// création d'objet
+ let produitsAchetes = [];
+
+
+const newUser = {
+  contact: {
+    lastName: "Nom",
+    firstName: "Prenom",
+    adress: "Adresse",
+    city: "Ville",
+    email: "Email",
+  },
+   products: produitsAchetes,
+};
+
+// -------  Envoi de la requête POST au back-end --------
+// Création de l'entête de la requête
+const options = {
+  method: "POST",
+  body: JSON.stringify(newUser),
+  headers: { "Content-Type": "application/json" },
+};
+
+fetch("http://localhost:3000/api/teddies/order", options)
+        .then((response) => response.json())
+        .then((data) => {
+         
+          console.log(data)
+          localStorage.setItem("orderId", data.orderId);
+        
+
+       
+        })
+        .catch((err) => {
+          alert("Il y a eu une erreur : " + err);
+        });
+
+
 
 
 
