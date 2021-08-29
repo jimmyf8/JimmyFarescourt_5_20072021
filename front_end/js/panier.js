@@ -72,7 +72,7 @@ getStoredTeddies();
 
 //bouton confirmer
 let btnFormulaire = document.getElementById("confirmation");
-console.log(btnFormulaire);
+
 
 btnFormulaire.addEventListener("click", ()=>{
     //stocker les saisies dans le local storage
@@ -102,6 +102,7 @@ confirmation.onclick = () =>{
 
 // création d'objet
  let produitsAchetes = [];
+ produitsAchetes = JSON.parse(localStorage.getItem('addTeddy'));
 
 
 const newUser = {
