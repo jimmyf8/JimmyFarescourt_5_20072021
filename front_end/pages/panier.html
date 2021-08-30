@@ -41,6 +41,7 @@
                                 <h1 id="h1_panier">Votre panier est vide</h1>
                             </div>
                         </div>
+                        <a id="lien_panier_vide"  href="../../index.html">Veuillez ajouter des produits dans votre panier</a>
                     </div>    
                 </header>
                 
@@ -52,12 +53,11 @@
                 <table id="table" class="table" style="background-color: white">
                     <!--tableau récapitulatif-->
                     <thead>
-                        <th>Libellé</th><p id="_id"></p>
+                        <th>Libellé</th>
                         <th>Couleur</th>
                         <th>Quantité</th>
                         <th>Prix</th>
                         <th>Total</th>
-                        
                     </thead>
                     <tbody id="contentTeddies">
 
@@ -65,40 +65,37 @@
                 </table>
                 <h2 id="total"></h2>
                 <div>
-                    <button type="submit" class="btn btn-primary" id="clear">vider le panier</button>
+                    <button class="btn btn-primary" id="clear">vider le panier</button>
                     <!--vider le panier-->
                 </div>
             </div>
         </div>
         <div class="container">
             <h2 id="h2_panier">Merci de remplir ce formulaire pour valider votre commande</h2>
-            <form id="formulaire">
+            <h2 id="text" style="color: white"></h2>
+            <form id="formConfirm">
                 <!--formulaire-->
                 <div class="form-group">
-                    <label for="usr">Votre prénom:</label>
-                    <input type="text" class="form-control" id="prenom" name="prenom" required>
+                    <label for="firstName">Votre prénom:</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" required>
                 </div>
                 <div class="form-group">
-                    <label for="nom">Votre nom:</label>
-                    <input type="text" class="form-control" id="nom" name="nom" required>
+                    <label for="lastName">Votre nom:</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" required>
                 </div>
                 <div class="form-group">
-                    <label for="pwd">Votre adresse:</label>
-                    <input type="text" class="form-control" id="adresse" name="adresse" required>
+                    <label for="address">Votre adresse:</label>
+                    <input type="text" class="form-control" id="address" name="address" required>
                 </div>
                 <div class="form-group">
-                    <label for="pwd">Votre code postal:</label>
-                    <input type="number" class="form-control" id="codePostal" name="codePostal" required>
+                    <label for="city">Votre ville:</label>
+                    <input type="text" class="form-control" id="city" name="city" required>
                 </div>
                 <div class="form-group">
-                    <label for="pwd">Votre ville:</label>
-                    <input type="text" class="form-control" id="ville" name="ville" required>
-                </div>
-                <div class="form-group">
-                    <label for="pwd">Votre adresse mail:</label>
+                    <label for="email">Votre adresse mail:</label>
                     <input type="email" class="form-control" id="email" name="email" required>
                 </div>
-                <input href="confirmation_de_commande.html" type="submit" class="btn btn-primary" id="confirmation"></input>
+                <input type="submit" class="btn btn-primary" value="Confirmer la commande">
                 <!--boutton confirmation onclick="ConfirmMessage()"-->
             </form>
             <div class="row">
