@@ -33,3 +33,15 @@ function displayArticle(article) {
 }
 
 
+//fleche
+const btn_fleche = document.querySelector('.btn_fleche');
+
+btn_fleche.addEventListener('click', () => {
+
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    })
+
+})

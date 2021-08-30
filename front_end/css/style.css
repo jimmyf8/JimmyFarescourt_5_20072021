@@ -17,7 +17,7 @@ body {
   color: #4975b3;
   font-size: 4vmax;
   text-align: center;
-  margin: 40px;
+  margin: 70px;
 }
 
 @media screen and (max-width: 1040px) {
@@ -30,6 +30,7 @@ body {
   color: #4975b3;
   font-size: 4vmax;
   text-align: center;
+  margin: 20px;
 }
 
 @media screen and (max-width: 1040px) {
@@ -62,6 +63,36 @@ input:valid {
 
 input {
   outline: none;
+}
+
+.btn_fleche {
+  font-size: 5vmin;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+}
+
+.btn_fleche:hover {
+  color: steelblue;
+}
+
+@media screen and (max-width: 1040px) {
+  .btn_fleche {
+    right: 30px;
+    bottom: 30px;
+    color: steelblue;
+  }
 }
 
 /*****************************accueil************************/
@@ -124,7 +155,7 @@ table {
 #h1_panier {
   color: #4975b3;
   font-size: 6vmax;
-  margin: 30px;
+  margin: 35px;
 }
 
 #h2_panier {
@@ -133,6 +164,16 @@ table {
 
 #total {
   color: white;
+}
+
+#lien_panier_vide {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /*****************formulaire******************/
