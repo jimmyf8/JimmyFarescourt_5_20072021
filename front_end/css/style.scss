@@ -72,7 +72,7 @@ input {
 //flèche
 .btn_fleche {
   font-size: 5vmin;
-  color: white;
+  color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,10 +84,21 @@ input {
     color:steelblue;
   }
   @media screen and (max-width: 1040px) {
+    right: 40px;
+    bottom: 30px;
+    color:rgb(0, 0, 0);
+  }
+  @media screen and (max-width: 999px) {
     right: 30px;
     bottom: 30px;
-    color:steelblue;
+    color:rgb(0, 0, 0);
   }
+  @media screen and (max-width: 768px) {
+    right: 20px;
+    bottom: 30px;
+    color:rgb(0, 0, 0);
+  }
+
 }
 
 /*****************************accueil************************/
